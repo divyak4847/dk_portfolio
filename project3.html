@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DK Portfolio | Project 3</title>
+  <!-- Roboto font -->
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
     rel="stylesheet"
@@ -13,40 +14,53 @@
 <body>
 
   <header>
-    <div class="logo">DK</div>
+    <div class="branding">
+      <h1 class="dk-logo">DK</h1>
+      <small class="deepika-subtitle">DEEPIKA</small>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="page-banner">
-    <h1>Project 3: Urban Design</h1>
+    <h1>Project 3</h1>
   </section>
 
-  <section class="slider-section">
-    <div class="slider" id="slider">
-      <div class="slide active">
-        <img src="assets/images/project3_slide1.jpg" alt="Project 3 - Slide 1" />
-      </div>
-      <div class="slide">
-        <img src="assets/images/project3_slide2.jpg" alt="Project 3 - Slide 2" />
-      </div>
-      <div class="slide">
-        <img src="assets/images/project3_slide3.jpg" alt="Project 3 - Slide 3" />
+  <main style="max-width: 800px; margin: 40px auto; text-align: center;">
+    <p style="color: #ccc;">
+      A brief description of Project 3. Clicking the video below opens a 2-slide gallery.
+    </p>
+
+    <!-- VIDEO -->
+    <video
+      class="project-video"
+      controls
+      data-project="project3"
+      style="width: 100%; border-radius: 5px;"
+    >
+      <source src="assets/videos/project3_video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </main>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal-project3">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-slider" data-slide="0">
+        <div class="modal-slide active">
+          <img src="assets/images/project3_slide1.jpg" alt="Project 3 Slide 1" />
+        </div>
+        <div class="modal-slide">
+          <img src="assets/images/project3_slide2.jpg" alt="Project 3 Slide 2" />
+        </div>
       </div>
     </div>
-  </section>
-
-  <section style="text-align: center; margin-bottom: 40px;">
-    <a href="projects.html" style="color: #ffcc00; text-decoration: none; font-weight: bold;">
-      &larr; Back to Projects
-    </a>
-  </section>
+  </div>
 
   <footer>
     <p>&copy; 2025 DK Portfolio</p>

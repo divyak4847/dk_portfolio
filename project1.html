@@ -4,63 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DK Portfolio | Project 1</title>
+  <!-- Roboto font -->
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
     rel="stylesheet"
   />
+  <!-- Main CSS (same as index.html / projects.html) -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER (same style as your other pages) -->
   <header>
-    <div class="logo">DK</div>
+    <div class="branding">
+      <h1 class="dk-logo">DK</h1>
+      <small class="deepika-subtitle">DEEPIKA</small>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- PAGE BANNER -->
+  <!-- PAGE BANNER (Optional) -->
   <section class="page-banner">
-    <h1>Project 1: Modern Residence</h1>
+    <h1>Project 1</h1>
   </section>
 
-  <!-- 3-SLIDE CLICK-TO-ADVANCE -->
-  <section class="slider-section">
-    <div class="slider" id="slider">
-      <!-- Slide 1 -->
-      <div class="slide active">
-        <img src="assets/images/project1_slide1.jpg" alt="Project 1 - Slide 1" />
-      </div>
-      <!-- Slide 2 -->
-      <div class="slide">
-        <img src="assets/images/project1_slide2.jpg" alt="Project 1 - Slide 2" />
-      </div>
-      <!-- Slide 3 -->
-      <div class="slide">
-        <img src="assets/images/project1_slide3.jpg" alt="Project 1 - Slide 3" />
+  <!-- MAIN CONTENT -->
+  <main style="max-width: 800px; margin: 40px auto; text-align: center;">
+    <p style="color: #ccc;">
+      A brief description of Project 1. This page has a video, and clicking it
+      will open a 2-slide gallery in a fade animation.
+    </p>
+
+    <!-- VIDEO (click triggers modal) -->
+    <video
+      class="project-video"
+      controls
+      data-project="project1"
+      style="width: 100%; border-radius: 5px;"
+    >
+      <source src="assets/videos/project1_video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </main>
+
+  <!-- MODAL (2 slides) -->
+  <div class="modal" id="modal-project1">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-slider" data-slide="0">
+        <div class="modal-slide active">
+          <!-- Replace with your actual image path -->
+          <img src="assets/images/project1_slide1.jpg" alt="Project 1 Slide 1" />
+        </div>
+        <div class="modal-slide">
+          <!-- Replace with your actual image path -->
+          <img src="assets/images/project1_slide2.jpg" alt="Project 1 Slide 2" />
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- BACK TO PROJECTS LINK -->
-  <section style="text-align: center; margin-bottom: 40px;">
-    <a href="projects.html" style="color: #ffcc00; text-decoration: none; font-weight: bold;">
-      &larr; Back to Projects
-    </a>
-  </section>
+  </div>
 
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 DK Portfolio</p>
   </footer>
 
-  <!-- Slider JS -->
+  <!-- Modal JS -->
   <script src="assets/js/script.js"></script>
 </body>
 </html>
