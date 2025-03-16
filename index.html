@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Naga Deepika | Architect</title>
-  <!-- Font Awesome for icons (megaphone, etc.) -->
+  <title>DK Portfolio | Home</title>
+  <!-- Roboto font -->
   <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-RXf+QSDCUQsZ6He72f1Z1ZCq+EJ7cI1x7X+Jkz1Y9J2P/Zd3BlqqUZejxIZ/dZL2Dw40E7KUk6+/7Y3moJjMDA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
   />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -21,178 +18,35 @@
     <div class="logo">DK</div>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#project-discussion">Project Form</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero" id="home">
+  <section class="hero">
     <div class="hero-content">
-      <!-- Profile Image -->
-      <img src="assets/images/deepika.jpg" alt="Naga Deepika" class="profile-pic" />
-      <h1>Hello, I'm <span>NAGA DEEPIKA</span></h1>
-      <h2>ARCHITECT</h2>
-      <a href="#portfolio" class="btn-portfolio">My Portfolio</a>
+      <h1>Welcome to DK Portfolio</h1>
+      <p>A glimpse into my creative world</p>
     </div>
   </section>
 
-  <!-- SERVICES SECTION -->
-  <section class="services" id="services">
-    <h2>Crafting Engaging Experiences</h2>
+  <!-- HOME INTRO (OPTIONAL) -->
+  <section class="home-intro">
+    <h2>Hi, I'm Naga Deepika</h2>
     <p>
-      I’m a visual designer passionate about creating engaging experiences.
-      I bring brands to life through thoughtful design. I help businesses
-      communicate their message effectively.
-    </p>
-    <h3>Services</h3>
-    <div class="services-grid">
-      <!-- Service 1 -->
-      <div class="service-item">
-        <img src="assets/images/service1.jpg" alt="Concept Design" />
-        <h4>Concept Design</h4>
-        <p>Innovative ideas from the ground up.</p>
-      </div>
-      <!-- Service 2 -->
-      <div class="service-item">
-        <img src="assets/images/service2.jpg" alt="Project Planning" />
-        <h4>Project Planning</h4>
-        <p>Effective strategies and thorough planning.</p>
-      </div>
-      <!-- Service 3 -->
-      <div class="service-item">
-        <img src="assets/images/service3.jpg" alt="Execution" />
-        <h4>Execution</h4>
-        <p>Precision in every detail from start to finish.</p>
-      </div>
-      <!-- Service 4 (Branding & Identity) -->
-      <div class="service-item">
-        <i class="fa-solid fa-bullhorn service-icon"></i>
-        <h4>Branding &amp; Identity</h4>
-        <p>Build a strong brand presence that resonates.</p>
-      </div>
-      <!-- Service 5 (Digital Marketing) -->
-      <div class="service-item">
-        <i class="fa-solid fa-chart-line service-icon"></i>
-        <h4>Digital Marketing</h4>
-        <p>Reach and engage your audience effectively.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECT DISCUSSION / FORM SECTION -->
-  <section class="project-discussion" id="project-discussion">
-    <h2>Let’s Discuss Your Project, Today!</h2>
-    <p>
-      Contact me to discuss how I can elevate your brand. Simply fill out this form
-      to get started.
-    </p>
-    <!-- Action points to PHP script (server-side) if you have one -->
-    <form action="submit_form.php" method="POST" class="project-form">
-      <!-- FIRST NAME -->
-      <input 
-        type="text" 
-        name="firstName" 
-        placeholder="First name*" 
-        pattern="^[A-Za-z]+$" 
-        title="Please enter letters only (no spaces, numbers, or special characters)." 
-        required 
-      />
-      
-      <!-- LAST NAME -->
-      <input 
-        type="text" 
-        name="lastName" 
-        placeholder="Last name*" 
-        pattern="^[A-Za-z]{2,}$" 
-        title="Must have at least 2 letters (no spaces, numbers, or special characters)." 
-        required 
-      />
-      
-      <!-- EMAIL -->
-      <input 
-        type="email" 
-        name="email" 
-        placeholder="Email address*" 
-        required 
-      />
-
-      <!-- COUNTRY CODE + PHONE -->
-      <div class="phone-container">
-        <select name="countryCode" required>
-          <option value="+91" selected>+91 (India)</option>
-          <option value="+1">+1 (USA)</option>
-          <option value="+44">+44 (UK)</option>
-          <option value="+61">+61 (Australia)</option>
-          <option value="+81">+81 (Japan)</option>
-          <option value="+49">+49 (Germany)</option>
-          <option value="+971">+971 (UAE)</option>
-          <option value="+86">+86 (China)</option>
-          <option value="+33">+33 (France)</option>
-          <option value="+39">+39 (Italy)</option>
-          <!-- Add more as needed -->
-        </select>
-        
-        <input 
-          type="tel" 
-          name="phone" 
-          placeholder="10-digit phone*" 
-          pattern="^[0-9]{10}$" 
-          title="Please enter exactly 10 digits (no letters or special characters)." 
-          required 
-        />
-      </div>
-      
-      <!-- MESSAGE -->
-      <textarea name="message" placeholder="Message*" rows="4" required></textarea>
-      
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-  <!-- PORTFOLIO SECTION -->
-  <section class="portfolio" id="portfolio">
-    <h2>My Projects</h2>
-    <p>Showcase your architectural works here.</p>
-    <div class="portfolio-grid">
-      <div class="project-card">
-        <img src="assets/images/project1.jpg" alt="Project 1" />
-        <h3>Modern Residence</h3>
-      </div>
-      <div class="project-card">
-        <img src="assets/images/project2.jpg" alt="Project 2" />
-        <h3>Office Space</h3>
-      </div>
-      <div class="project-card">
-        <img src="assets/images/project3.jpg" alt="Project 3" />
-        <h3>Urban Design</h3>
-      </div>
-      <div class="project-card">
-        <img src="assets/images/project4.jpg" alt="Project 4" />
-        <h3>Landscape Architecture</h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section class="contact" id="contact">
-    <h2>Contact</h2>
-    <p>
-      If you'd like to work together or just say hello, drop a message at:
-      <a href="mailto:deepika.komarthi24@gmail.com">deepika.komarthi24@gmail.com</a><br/>
-      Or call me at: <strong>+91 7386929084</strong>
+      I'm an architect and designer passionate about bringing concepts to life.
+      Explore my site to learn more about my background, see my projects, or get in touch.
     </p>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Naga Deepika Portfolio</p>
+    <p>&copy; 2025 DK Portfolio</p>
   </footer>
 
-  <script src="assets/js/script.js"></script>
 </body>
 </html>
