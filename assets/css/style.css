@@ -1,379 +1,378 @@
-/* Import a clean, modern font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+/* Roboto Font is imported via HTML <head> */
 
-/* Reset & Base Styles */
+/* Global Resets */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #fff;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* HEADER */
-header {
-  width: 100%;
-  background-color: #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-}
-
-.logo {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ffcc00;
-}
-
-/* HERO SECTION */
-.hero {
-  width: 100%;
-  height: 100vh;
-  padding-top: 70px; /* Offset for fixed header */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f0f0f0;
-}
-
-.hero-content {
-  text-align: center;
-  padding: 0 20px;
-}
-
-.profile-pic {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.hero-content h1 {
-  font-size: 24px;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-.hero-content h1 span {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.hero-content h2 {
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  color: #555;
-}
-
-.btn-portfolio {
-  display: inline-block;
-  background-color: #000;
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.btn-portfolio:hover {
-  background-color: #ffcc00;
-  color: #000;
-}
-
-/* SERVICES SECTION */
-.services {
-  min-height: 60vh;
-  padding: 80px 20px;
-  background: #fff;
-  color: #333;
-  text-align: center;
-}
-
-.services h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-.services p {
-  max-width: 600px;
-  margin: 0 auto 20px;
-  line-height: 1.6;
-}
-
-.services h3 {
-  font-size: 24px;
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-
-.services-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.service-item {
-  flex: 1 1 250px;
-  background: #f8f8f8;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-  text-align: center;
-}
-
-.service-item img {
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.service-item:hover {
-  transform: translateY(-5px);
-}
-
-/* For the FA icons used in Branding & Digital Marketing */
-.service-icon {
-  font-size: 48px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-/* PROJECT DISCUSSION (FORM) SECTION */
-.project-discussion {
-  padding: 80px 20px;
-  background: #fff;
-  text-align: center;
-}
-
-.project-discussion h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.project-discussion p {
-  max-width: 600px;
-  margin: 0 auto 30px;
-  color: #666;
-}
-
-.project-form {
-  max-width: 400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-/* Country code + phone in one line on bigger screens */
-.phone-container {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-/* Make the select narrower, phone input wider */
-.phone-container select {
-  width: 110px;      /* or any width you like */
-  min-width: 110px;  /* ensure it doesn't shrink smaller than 110px */
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font: inherit;
-}
-
-.phone-container input[type="tel"] {
-  flex: 1;          /* phone input takes remaining space */
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font: inherit;
-}
-
-.project-form input,
-.project-form textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font: inherit;
-}
-
-.project-form button {
-  background-color: #000;
-  color: #fff;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s;
-}
-
-.project-form button:hover {
-  background-color: #ffcc00;
-  color: #000;
-}
-
-/* PORTFOLIO SECTION */
-.portfolio {
-  min-height: 60vh;
-  padding: 80px 20px;
-  text-align: center;
-  background: #f8f8f8;
-}
-
-.portfolio h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.portfolio p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 40px;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.project-card {
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.project-card img {
-  width: 100%;
-  display: block;
-}
-
-.project-card h3 {
-  padding: 15px;
-  font-size: 18px;
-}
-
-/* CONTACT SECTION */
-.contact {
-  min-height: 40vh;
-  padding: 80px 20px;
-  text-align: center;
-  background: #f8f8f8;
-}
-
-.contact h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.contact p {
-  font-size: 16px;
-  color: #666;
-}
-
-.contact a {
-  color: #000;
-  text-decoration: underline;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #000;
-  color: #fff;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body: black background, white text */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* Header */
   header {
-    flex-direction: column;
-    padding: 10px 20px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .profile-pic {
-    width: 140px;
-    height: 140px;
-  }
-
-  .hero-content h1 {
-    font-size: 20px;
-  }
-
-  .hero-content h2 {
-    font-size: 16px;
-  }
-
-  .services h2,
-  .project-discussion h2,
-  .portfolio h2,
-  .contact h2 {
-    font-size: 24px;
-  }
-
-  .services-grid {
-    flex-direction: column;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
   }
-
-  /* Stack phone code & phone input vertically on mobile */
-  .phone-container {
+  
+  .logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: #ffcc00;
+  }
+  
+  /* Make space for fixed header */
+  section {
+    margin-top: 80px; 
+  }
+  
+  /* Hero Section */
+  .hero {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #ffcc00;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    color: #ccc;
+  }
+  
+  /* Generic Page Banner (for about, projects, contact) */
+  .page-banner {
+    background: #111;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .page-banner h1 {
+    font-size: 32px;
+    color: #ffcc00;
+  }
+  
+  /* Home Intro (optional) */
+  .home-intro {
+    padding: 40px 20px;
+    text-align: center;
+    background: #111;
+  }
+  
+  .home-intro h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ffcc00;
+  }
+  
+  .home-intro p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #ccc;
+  }
+  
+  /* About Content */
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 20px;
+    justify-content: center;
+  }
+  
+  .profile-pic img {
+    width: 250px;
+    border-radius: 8px;
+    display: block;
+  }
+  
+  .bio {
+    max-width: 600px;
+  }
+  
+  .bio h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+  }
+  
+  /* Projects Grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  
+  .project-card {
+    background: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+  }
+  
+  .project-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .project-card h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #ffcc00;
+  }
+  
+  .project-card p {
+    color: #ccc;
+  }
+  
+  /* Contact Page */
+  .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 20px;
+    justify-content: center;
+  }
+  
+  .contact-info {
+    max-width: 400px;
+  }
+  
+  .contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ffcc00;
+  }
+  
+  .contact-info p {
+    color: #ccc;
+  }
+  
+  .contact-form {
+    max-width: 400px;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 15px;
   }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+    font: inherit;
+  }
+  
+  .contact-form button {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #e6b800;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #fff;
+    margin-top: 40px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .about-content,
+    .contact-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+/* SLIDER SECTION */
+.slider-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .slider {
+    position: relative;
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+  }
+  
+  .slide {
+    display: none; /* Hide slides by default */
+  }
+  
+  .slide.active {
+    display: block; /* Show only the active slide */
+  }
+  
+  /* Make sure images and videos fit nicely */
+  .slide img,
+  .slide video {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Slider Controls */
+  .slider-controls {
+    margin-top: 10px;
+  }
+  
+  .slider-controls button {
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .slider-controls button:hover {
+    background-color: #e6b800;
+  }
+  
+  /* Example: if you want the slider to stand out on your black background */
+  .slider-section {
+    background-color: #111; /* or #000, depending on your design */
+    margin-bottom: 40px;
+    border-radius: 8px;
+    padding: 40px 20px;
+  }
+/* Slider Container */
+.slider-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .slider {
+    position: relative;
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+    cursor: pointer;  /* So user knows they can click */
+  }
+  
+  /* Each slide is hidden by default, with a fade transition */
+  .slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* The active slide is visible and fully opaque */
+  .slide.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  /* Make sure images and videos fit nicely */
+  .slide img,
+  .slide video {
+    width: 100%;
+    border-radius: 8px;
+  }
+/* (Add to your existing style.css) */
 
-  .portfolio-grid {
-    grid-template-columns: 1fr;
+/* Project Video Section */
+.project-video-section {
+    padding: 40px 20px;
+    text-align: center; /* or left, if you prefer */
   }
-}
+  
+  .video-container {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+  }
+  
+  .video-container video {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .project-details {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center; /* or left */
+  }
+  
+  .project-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffcc00; /* highlight color if you like */
+  }
+  
+  .project-details p {
+    font-size: 16px;
+    color: #ccc; /* if you have a dark background */
+  }
+    
