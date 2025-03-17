@@ -49,7 +49,7 @@ header {
 
 nav ul {
   list-style: none;
-  display: flex; /* side by side on mobile */
+  display: flex;
   gap: 20px;
 }
 
@@ -62,10 +62,10 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-  color: #ccc; /* grey on hover/active */
+  color: #ccc;
 }
 
-/* Add margin for fixed header */
+/* Ensure content doesn't overlap header */
 main, section {
   margin-top: 80px;
 }
@@ -85,10 +85,10 @@ main, section {
 
 .hero-photo {
   width: 100%;
-  height: 120vh;      /* smaller so we see more body */
-  object-fit: cover;  
-  object-position: 50% 20%; /* shift so her head is in view */
-  opacity: 0.7;       /* reduce photo opacity */
+  height: 70vh; /* show from head to waist */
+  object-fit: cover;
+  object-position: 50% 20%;
+  opacity: 0.7;
   display: block;
 }
 
@@ -112,6 +112,7 @@ main, section {
 /* HOME SECTIONS */
 .home-bio,
 .home-education,
+.home-languages,
 .home-software,
 .home-video,
 .home-contact {
@@ -126,22 +127,6 @@ main, section {
 .home-contact p {
   color: #ccc;
 }
-/* Center the content inside .home-video if needed */
-.home-video {
-  text-align: center; 
-}
-
-/* Target only this one “About Me” video */
-.about-me-video {
-  display: inline-block;      /* to respect text-align: center */
-  width: 300px;               /* fixed width for a cute size */
-  max-width: 90%;             /* keep it responsive on small screens */
-  height: auto;               /* maintain aspect ratio */
-  margin: 0 auto;             /* if you prefer display:block, this helps center */
-  border-radius: 6px;         /* optional aesthetic corner rounding */
-  border: 2px solid #444;     /* optional subtle border for aesthetics */
-}
-
 
 /* EDUCATION */
 .home-education h2 {
@@ -149,7 +134,6 @@ main, section {
   margin-bottom: 20px;
 }
 
-/* .edu-item => subtle hover effect */
 .edu-item {
   display: flex;
   align-items: center;
@@ -164,7 +148,7 @@ main, section {
 }
 
 .edu-item img {
-  width: 40px; 
+  width: 40px;
   height: 40px;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -184,6 +168,31 @@ main, section {
   text-align: left;
   margin: 0;
   font-size: 15px;
+}
+
+/* LANGUAGES KNOWN */
+.home-languages h2 {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.language-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.lang-item {
+  font-size: 16px;
+  color: #fff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.lang-item:hover {
+  transform: scale(1.2);
+  color: #ccc;
 }
 
 /* SOFTWARE ICONS with pop-out hover */
@@ -208,6 +217,26 @@ main, section {
 
 .software-icons img:hover {
   transform: scale(1.2);
+}
+
+/* ABOUT-ME VIDEO (optional smaller sizing if needed) */
+.about-me-video {
+  display: inline-block;
+  width: 300px;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 6px;
+  border: 2px solid #444;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+  margin-top: 40px;
 }
 
 /* PROJECTS PAGE */
@@ -235,7 +264,7 @@ main, section {
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  width: 280px; 
+  width: 280px;
   box-shadow: 0 2px 5px rgba(255,255,255,0.1);
 }
 
@@ -250,7 +279,6 @@ main, section {
   margin: 10px 0;
 }
 
-/* Smaller videos => neat layout */
 .project-video {
   width: 100%;
   max-width: 300px;
@@ -261,18 +289,9 @@ main, section {
   margin: 0 auto;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #111;
-  color: #fff;
-  margin-top: 40px;
-}
-
-/* MODAL with fade-in-up animation */
+/* MODAL (fade-in-up) */
 .modal {
-  display: none; /* hidden by default */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -289,7 +308,7 @@ footer {
 }
 
 .modal.show {
-  display: flex; /* allow flex layout */
+  display: flex;
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0) scale(1);
@@ -297,7 +316,7 @@ footer {
 
 .modal-content {
   position: relative;
-  max-width: 700px; 
+  max-width: 700px;
   width: 90%;
   background: #111;
   border-radius: 8px;
@@ -317,7 +336,7 @@ footer {
 /* Slide container in modal */
 .modal-slider {
   position: relative;
-  cursor: pointer; /* user clicks to go next slide */
+  cursor: pointer;
 }
 
 .modal-slide {
@@ -331,18 +350,18 @@ footer {
   opacity: 1;
 }
 
-/* Larger rectangle images for slides */
+/* Bigger slides => 700x500 */
 .modal-slide img {
-  width: 600px;
-  height: 400px;
+  width: 900px;
+  height: 500px;
   object-fit: cover;
-  max-width: 90%;
+  max-width: 110%;
   border-radius: 5px;
   margin: 0 auto;
   display: block;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
   .hero-text-overlay h2 {
     font-size: 24px;
@@ -353,14 +372,11 @@ footer {
   .hero-photo {
     height: 60vh; /* smaller on mobile if needed */
   }
-  .edu-item {
-    flex-direction: row; 
-  }
   .project-video {
-    max-width: 250px; /* even smaller on phone if desired */
+    max-width: 250px;
   }
   .modal-slide img {
     width: 90%;
-    height: auto; 
+    height: auto;
   }
 }
