@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // OPEN MODAL with fade-in-up
+  // Open modal with fade-in-up
   const slideLinks = document.querySelectorAll(".open-slides");
   slideLinks.forEach(link => {
     link.addEventListener("click", (e) => {
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // CLOSE MODAL (X)
+  // Close modal (X)
   const closeButtons = document.querySelectorAll(".close");
   closeButtons.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // CLICK OUTSIDE => close
+  // Click outside => close
   const modals = document.querySelectorAll(".modal");
   modals.forEach(modal => {
     modal.addEventListener("click", (e) => {
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
 
-    // Slide fade logic: click inside .modal-slider => next slide
+    // Slide fade logic: click inside modal-slider => next slide
     const slider = modal.querySelector(".modal-slider");
     if (slider) {
       slider.addEventListener("click", () => {
